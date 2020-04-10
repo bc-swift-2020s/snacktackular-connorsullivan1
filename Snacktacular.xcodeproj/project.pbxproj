@@ -19,6 +19,7 @@
 		B3C00E41243E68AF0092B7F6 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C00E40243E68AF0092B7F6 /* Spot.swift */; };
 		B3C00E43243E69AD0092B7F6 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C00E42243E69AD0092B7F6 /* Spots.swift */; };
 		B3C4E7D5243FF03B00B150FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3C4E7D4243FF03B00B150FB /* GoogleService-Info.plist */; };
+		B3C6B3602440EC9200E27FCF /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C6B35F2440EC9200E27FCF /* APIkeys.swift */; };
 		DE9D0DBBEC9191A8DD19E3B3 /* Pods_Snacktacular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383FF8FE68B54A0B50EF2410 /* Pods_Snacktacular.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		B3C00E40243E68AF0092B7F6 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		B3C00E42243E69AD0092B7F6 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		B3C4E7D4243FF03B00B150FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B3C6B35F2440EC9200E27FCF /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
 		D20EDD0805790DCDAE85CAF2 /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1DEAD04306D329533249ED /* Pods-Snacktacular.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.release.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
 				3E8390EB206597F600512DEA /* Info.plist */,
 				B3C4E7D4243FF03B00B150FB /* GoogleService-Info.plist */,
+				B3C6B35F2440EC9200E27FCF /* APIkeys.swift */,
 			);
 			path = Snacktacular;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C6B3602440EC9200E27FCF /* APIkeys.swift in Sources */,
 				3E8390E2206597F600512DEA /* SpotsListViewController.swift in Sources */,
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
