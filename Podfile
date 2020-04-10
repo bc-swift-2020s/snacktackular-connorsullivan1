@@ -7,6 +7,7 @@ target 'Snacktacular' do
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
+    pod 'Firebase'
     pod 'Firebase/Core'
     pod 'Firebase/Storage'
     pod 'Firebase/Firestore'

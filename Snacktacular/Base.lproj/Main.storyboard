@@ -105,7 +105,11 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="1A4-7d-Reh">
-                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="0Xl-Y6-OJl"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="0Xl-Y6-OJl">
+                            <connections>
+                                <action selector="signOutPresesd:" destination="BYZ-38-t0r" id="dA6-UD-MgE"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h6L-yW-eBN">
                             <connections>
                                 <segue destination="bJy-tV-PMh" kind="presentation" identifier="AddSpot" id="Pko-9g-ZUS"/>
@@ -125,11 +129,11 @@
             <objects>
                 <viewController id="L7d-5i-Cie" customClass="SpotDetailViewController" customModule="Snacktacular" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="atJ-Va-hnz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npF-xl-bxb">
-                                <rect key="frame" x="0.0" y="88" width="375" height="375"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="375"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4QE-cW-8Sq">
                                         <rect key="frame" x="8" y="8" width="359" height="24"/>
@@ -427,7 +431,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sl5-aU-Gjj"/>
+        <segue reference="Zox-RK-nHB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera-icon-white" width="24" height="17"/>

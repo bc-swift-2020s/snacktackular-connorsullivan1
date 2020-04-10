@@ -26,6 +26,7 @@ class SpotDetailViewController: UIViewController {
         }
         nameField.text = spot.name
         addressField.text = spot.address
+        
     }
 
     @IBAction func photoButtonPressed(_ sender: UIButton) {
