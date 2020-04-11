@@ -39,7 +39,6 @@ class SpotsListViewController: UIViewController {
         spots.loadData {
             self.tableView.reloadData()
         }
-        print("asdf \(spots.spotArray)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,7 +63,6 @@ class SpotsListViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        tableView.reloadData()
         if segue.identifier == "ShowSpot" {
             let destination = segue.destination as! SpotDetailViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
@@ -96,7 +94,6 @@ extension SpotsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SpotsTableViewCell
         cell.nameLabel.text = spots.spotArray[indexPath.row].name
-        print("TableView cellForRowAt")
         return cell
     }
     
