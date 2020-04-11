@@ -24,7 +24,6 @@ class SpotsListViewController: UIViewController {
         super.viewDidLoad()
         
         authUI = FUIAuth.defaultAuthUI()
-        //test = FUIAuth.
         // You need to adopt a FUIAuthDelegate protocol to receive callback
         authUI.delegate = self
         
@@ -32,15 +31,15 @@ class SpotsListViewController: UIViewController {
         tableView.dataSource = self
         tableView.isHidden = true
         
-        
-        
         spots = Spots()
-        spots.spotArray.append(Spot(name: "Charles River", address: "483 Dedham Street", coordinate: CLLocationCoordinate2D(), averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
-        spots.spotArray.append(Spot(name: "Chick Fil a", address: "Westie", coordinate: CLLocationCoordinate2D(), averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
-        spots.spotArray.append(Spot(name: "Pizza Etc", address: "Oak Square", coordinate: CLLocationCoordinate2D(), averageRating: 0.0, numberOfReviews: 0, postingUserID: "", documentID: ""))
-        
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        spots.loadData {
+            self.tableView.reloadData()
+        }
+        print("asdf \(spots.spotArray)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,17 +51,20 @@ class SpotsListViewController: UIViewController {
         let providers: [FUIAuthProvider] = [
             FUIGoogleAuth(),
         ]
-        if authUI.auth?.currentUser == nil {
-            self.authUI.providers = providers
-            present(authUI.authViewController(), animated: true, completion: nil)
-
+        
+        let currentUser = authUI.auth?.currentUser
+        if currentUser == nil {
+            self.authUI?.providers = providers
+            let loginViewController = authUI.authViewController()
+            loginViewController.modalPresentationStyle = .fullScreen
+            present(loginViewController, animated: true, completion: nil)
         } else {
             tableView.isHidden = false
         }
     }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        tableView.reloadData()
         if segue.identifier == "ShowSpot" {
             let destination = segue.destination as! SpotDetailViewController
             let selectedIndexPath = tableView.indexPathForSelectedRow!
@@ -83,7 +85,6 @@ class SpotsListViewController: UIViewController {
             print("Couldn't sign out")
             tableView.isHidden = true
         }
-        
     }
 }
 
@@ -95,6 +96,7 @@ extension SpotsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SpotsTableViewCell
         cell.nameLabel.text = spots.spotArray[indexPath.row].name
+        print("TableView cellForRowAt")
         return cell
     }
     
@@ -125,9 +127,9 @@ extension SpotsListViewController: FUIAuthDelegate {
     func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
         let loginViewController = FUIAuthPickerViewController(authUI: authUI)
         loginViewController.view.backgroundColor = UIColor.white
-
-        loginViewController.navigationItem.leftBarButtonItem = nil
-        loginViewController.isModalInPresentation = true
+        
+        //loginViewController.navigationItem.leftBarButtonItem = nil
+        //loginViewController.isModalInPresentation = true
         
         let marginInsets: CGFloat = 16
         let imageHeight: CGFloat = 225
