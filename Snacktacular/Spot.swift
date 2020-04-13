@@ -57,8 +57,8 @@ class Spot: NSObject, MKAnnotation {
     convenience init (dictionary: [String: Any]) {
         let name = dictionary["name"] as! String? ?? ""
         let address = dictionary["address"] as! String? ?? ""
-        let latitude = dictionary["latitude"] as! CLLocationDegrees? ?? 0.0
-        let longitude = dictionary["longitude"] as! CLLocationDegrees? ?? 0.0
+        let latitude = dictionary["latitude"] as! CLLocationDegrees? ?? 1.0
+        let longitude = dictionary["longitude"] as! CLLocationDegrees? ?? 1.0
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let averageRating = dictionary["averageRating"] as! Double? ?? 0.0
         let numberOfReviews = dictionary["numberOfReviews"] as! Int? ?? 0
