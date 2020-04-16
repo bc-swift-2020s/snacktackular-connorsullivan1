@@ -171,7 +171,6 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
         var address = ""
         currentLocation = locations.last
         spot.coordinate = currentLocation.coordinate
-        print("asdf  \(spot.coordinate)")
         geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: {placemarks, error in
             if placemarks != nil {
                 let placemark = placemarks?.last
