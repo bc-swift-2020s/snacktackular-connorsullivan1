@@ -31,7 +31,6 @@ class SpotDetailViewController: UIViewController {
         
         //mapView.delegate = self
         
-        
         if spot == nil {
             spot = Spot()
             getLocation()

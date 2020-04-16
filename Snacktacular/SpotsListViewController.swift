@@ -92,19 +92,21 @@ class SpotsListViewController: UIViewController {
         switch sortSegmentedControl.selectedSegmentIndex {
         case 0:
             spots.spotArray.sort(by: { $0.name < $1.name})
+            print("+++ 0")
         case 1:
             spots.spotArray.sort(by: {$0.location.distance(from: currentLocation) < $1.location.distance(from: currentLocation)})
+            print("+++ 1")
         case 2:
             print("todo")
         default:
             print("You shouldn't have gotten here")
         }
-        tableView.reloadData()
     }
     
-    @IBAction func sortSegmentPressed(_ sender: UIBarButtonItem) {
+    @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
     }
+    
     
     @IBAction func signOutPresesd(_ sender: UIBarButtonItem) {
         do {
