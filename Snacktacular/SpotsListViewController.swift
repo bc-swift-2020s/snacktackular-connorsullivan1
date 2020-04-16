@@ -36,11 +36,11 @@ class SpotsListViewController: UIViewController {
         tableView.isHidden = true
         
         spots = Spots()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("**viewWillAppear Called")
         getLocation()
         spots.loadData {
             self.sortBasedOnSegmentPressed()
@@ -92,10 +92,8 @@ class SpotsListViewController: UIViewController {
         switch sortSegmentedControl.selectedSegmentIndex {
         case 0:
             spots.spotArray.sort(by: { $0.name < $1.name})
-            print("+++ 0")
         case 1:
             spots.spotArray.sort(by: {$0.location.distance(from: currentLocation) < $1.location.distance(from: currentLocation)})
-            print("+++ 1")
         case 2:
             print("todo")
         default:
@@ -105,6 +103,7 @@ class SpotsListViewController: UIViewController {
     
     @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
         sortBasedOnSegmentPressed()
+        tableView.reloadData()
     }
     
     
