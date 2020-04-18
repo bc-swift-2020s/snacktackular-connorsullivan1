@@ -23,6 +23,7 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     var spot: Spot!
+    var reviews: [Review] = []
     let regionDistance: CLLocationDistance = 750
     var locationManager: CLLocationManager!
     var currentLocation: CLLocation!
@@ -63,6 +64,27 @@ class SpotDetailViewController: UIViewController {
         
         updateUserInterface()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        spot.name = nameField.text!
+        spot.address = addressField.text!
+        switch segue.identifier ?? "" {
+        case "AddReview":
+            let navigationController = segue.destination as! UINavigationController
+            let destination = navigationController.viewControllers.first as! ReviewTableViewController
+            destination.spot = spot
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                tableView.deselectRow(at: selectedIndexPath, animated: true)
+            }
+        case "ShowReview":
+            let destination = segue.destination as! ReviewTableViewController
+            destination.spot = spot
+            let selectedIndexPath = tableView.indexPathForSelectedRow!
+            destination.review = reviews[selectedIndexPath.row]
+        default:
+            print("***ERROR: did not have a segue in SpotDetailViewController")
+        }
     }
     
     func showAlert(title: String, message: String) {

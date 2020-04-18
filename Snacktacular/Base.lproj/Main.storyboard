@@ -492,7 +492,7 @@
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
                                                             <connections>
-                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="Uy4-A9-koD"/>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="3lI-9E-vlh"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxV-Eb-0CC">
@@ -500,7 +500,7 @@
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
                                                             <connections>
-                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="Bpf-o6-5n3"/>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="1ec-oC-7IV"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoL-12-x2e">
@@ -508,7 +508,7 @@
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
                                                             <connections>
-                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="MLH-ci-B5h"/>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="Ajg-VZ-rXn"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-BW-qjr">
@@ -516,15 +516,15 @@
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
                                                             <connections>
-                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="4e6-k6-QKW"/>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="0dV-SO-hwG"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztk-jM-QHy">
+                                                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztk-jM-QHy">
                                                             <rect key="frame" x="174.33333333333331" y="0.0" width="41.666666666666657" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
                                                             <connections>
-                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="ohf-46-cRI"/>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="4ov-Nb-HHh"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -709,11 +709,11 @@
                         <outlet property="reviewTitle" destination="fYW-Ja-1Yi" id="wFJ-pS-Zj3"/>
                         <outlet property="reviewView" destination="52O-pS-KWM" id="pzA-xt-2Z9"/>
                         <outlet property="saveBarButton" destination="pr7-Wc-rcI" id="n76-8i-wXK"/>
-                        <outletCollection property="starButtonCollection" destination="a6M-qi-vGI" collectionClass="NSMutableArray" id="Q0G-31-wzp"/>
-                        <outletCollection property="starButtonCollection" destination="OxV-Eb-0CC" collectionClass="NSMutableArray" id="lam-Di-dz7"/>
-                        <outletCollection property="starButtonCollection" destination="zoL-12-x2e" collectionClass="NSMutableArray" id="ZQ7-rs-5nB"/>
-                        <outletCollection property="starButtonCollection" destination="wWn-BW-qjr" collectionClass="NSMutableArray" id="CFa-Wo-lrn"/>
-                        <outletCollection property="starButtonCollection" destination="ztk-jM-QHy" collectionClass="NSMutableArray" id="3qa-VB-zvv"/>
+                        <outletCollection property="starButtonCollection" destination="ztk-jM-QHy" collectionClass="NSMutableArray" id="61X-no-MeO"/>
+                        <outletCollection property="starButtonCollection" destination="wWn-BW-qjr" collectionClass="NSMutableArray" id="o7C-NB-upe"/>
+                        <outletCollection property="starButtonCollection" destination="zoL-12-x2e" collectionClass="NSMutableArray" id="DiT-t2-vmn"/>
+                        <outletCollection property="starButtonCollection" destination="OxV-Eb-0CC" collectionClass="NSMutableArray" id="z5u-zp-kYv"/>
+                        <outletCollection property="starButtonCollection" destination="a6M-qi-vGI" collectionClass="NSMutableArray" id="yNt-aj-y7d"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPz-RZ-nYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
