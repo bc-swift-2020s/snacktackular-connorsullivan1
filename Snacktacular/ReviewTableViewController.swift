@@ -20,6 +20,16 @@ class ReviewTableViewController: UITableViewController {
      @IBOutlet weak var saveBarButton: UIBarButtonItem!
      @IBOutlet weak var deleteButton: UIButton!
      @IBOutlet weak var buttonBackgroundView: UIView!
+    @IBOutlet var starButtonCollection: [UIButton]!
+    
+    var rating = 0 {
+        didSet {
+            for starButton in starButtonCollection {
+                let image = UIImage(named: (starButton.tag < rating ? "star-filled" : "star-empty"))
+                starButton.setImage(image, for: .normal)
+            }
+        }
+    }
     
     
     
@@ -40,6 +50,11 @@ class ReviewTableViewController: UITableViewController {
         } else {
             navigationController?.popViewController(animated: true)
         }
+    }
+    
+    @IBAction func starButtonPressed(_ sender: UIButton) {
+        
+        rating = Int(sender.tag) + 1
     }
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {

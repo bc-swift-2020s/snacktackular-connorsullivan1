@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vfD-nU-yAv">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -490,26 +491,41 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="Uy4-A9-koD"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxV-Eb-0CC">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxV-Eb-0CC">
                                                             <rect key="frame" x="43.333333333333329" y="0.0" width="41.666666666666671" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="Bpf-o6-5n3"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoL-12-x2e">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoL-12-x2e">
                                                             <rect key="frame" x="86.999999999999986" y="0.0" width="41.666666666666671" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="MLH-ci-B5h"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-BW-qjr">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWn-BW-qjr">
                                                             <rect key="frame" x="130.66666666666669" y="0.0" width="41.666666666666657" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="4e6-k6-QKW"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztk-jM-QHy">
+                                                        <button opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztk-jM-QHy">
                                                             <rect key="frame" x="174.33333333333331" y="0.0" width="41.666666666666657" height="40"/>
                                                             <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <state key="normal" image="star-empty"/>
+                                                            <connections>
+                                                                <action selector="starButtonPressed:" destination="BpM-bY-mM1" eventType="touchUpInside" id="ohf-46-cRI"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -606,8 +622,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Posted December 32" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-TC-3NP">
-                                                    <rect key="frame" x="176" y="16" width="175" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted December 32" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-TC-3NP">
+                                                    <rect key="frame" x="176" y="16" width="175" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="22y-9d-jJV"/>
                                                         <constraint firstAttribute="width" constant="175" id="ZTg-eb-brR"/>
@@ -619,11 +635,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="52O-pS-KWM" secondAttribute="trailing" constant="8" id="2ug-0p-qp2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JwN-TC-3NP" secondAttribute="trailing" constant="8" id="G8r-Ut-2ga"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JwN-TC-3NP" secondAttribute="trailing" constant="8" id="J2e-3I-PAf"/>
                                                 <constraint firstItem="52O-pS-KWM" firstAttribute="leading" secondItem="Vh0-dS-2DG" secondAttribute="leadingMargin" constant="8" id="KEh-dE-OGT"/>
                                                 <constraint firstItem="fFo-Uj-Ojw" firstAttribute="leading" secondItem="Vh0-dS-2DG" secondAttribute="leadingMargin" constant="8" id="akh-nB-YNS"/>
                                                 <constraint firstItem="fFo-Uj-Ojw" firstAttribute="top" secondItem="Vh0-dS-2DG" secondAttribute="topMargin" constant="5" id="bpn-Cu-6nc"/>
                                                 <constraint firstItem="52O-pS-KWM" firstAttribute="top" secondItem="fFo-Uj-Ojw" secondAttribute="bottom" constant="3" id="gF2-U6-3bB"/>
+                                                <constraint firstItem="JwN-TC-3NP" firstAttribute="top" secondItem="Vh0-dS-2DG" secondAttribute="topMargin" constant="5" id="lHi-X4-5uU"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -691,6 +709,11 @@
                         <outlet property="reviewTitle" destination="fYW-Ja-1Yi" id="wFJ-pS-Zj3"/>
                         <outlet property="reviewView" destination="52O-pS-KWM" id="pzA-xt-2Z9"/>
                         <outlet property="saveBarButton" destination="pr7-Wc-rcI" id="n76-8i-wXK"/>
+                        <outletCollection property="starButtonCollection" destination="a6M-qi-vGI" collectionClass="NSMutableArray" id="Q0G-31-wzp"/>
+                        <outletCollection property="starButtonCollection" destination="OxV-Eb-0CC" collectionClass="NSMutableArray" id="lam-Di-dz7"/>
+                        <outletCollection property="starButtonCollection" destination="zoL-12-x2e" collectionClass="NSMutableArray" id="ZQ7-rs-5nB"/>
+                        <outletCollection property="starButtonCollection" destination="wWn-BW-qjr" collectionClass="NSMutableArray" id="CFa-Wo-lrn"/>
+                        <outletCollection property="starButtonCollection" destination="ztk-jM-QHy" collectionClass="NSMutableArray" id="3qa-VB-zvv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPz-RZ-nYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
